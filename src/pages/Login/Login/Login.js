@@ -1,17 +1,11 @@
-import React, { useRef, useState } from "react";
-import auth from "../../firebase.init";
-import "./Login.css";
+import React, { useRef } from "react";
+import auth from "../../../firebase.init";
 import Spinner from "../../common/Spinner/Spinner"; 
-import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import { Form, Spinner, Toast } from "react-bootstrap";
-import GoogleSign from "./GoogleSign";
+import { Form, Toast } from "react-bootstrap";
+import GoogleSign from "../GoogleSign/GoogleSign";
 import PageTitle from "../../common/PageTitle/PageTitle";
+import { useSignInWithEmailAndPassword,useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 
 const Login = () => {
 const emailRef = useRef("");
@@ -23,7 +17,7 @@ let from = location.state?.from?.pathname || "/checkout";
 let errorElement;
 const [SignInWithEmailAndPassword,
 user,loading, error] = useSignInWithEmailAndPassword(auth);
-const [useSendPasswordResetEmail,sending]= useSendPasswordResetEmail(auth);
+const [SendPasswordResetEmail,sending]= useSendPasswordResetEmail(auth);
 
 if(loading || sending){
   return <Spinner></Spinner>
@@ -50,7 +44,7 @@ const navigateRegister = event => {
 const passwordReset = async () =>{
     const email= emailRef.current.value;
     if(email){
-        await useSendPasswordResetEmail(email);
+        await SendPasswordResetEmail(email);
         Toast('sent email');
 
     }
@@ -64,17 +58,8 @@ return (
   <div className='container w-50 mx-auto mt-5 pt-5'>
       <PageTitle title='Login'></PageTitle>
       <h1 className='text-primary text-center mt-2'>Please Login</h1>
-      <Form>
-  <Form.Group className="mb-3" controlId="formGroupEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formGroupPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-</Form>
-      {/* <Form onSubmit={handleSubmit}>
+      
+      <Form onSubmit={handleSubmit}>
           <Form.Group className="my-3" controlId="formBasicEmail">
               <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
           </Form.Group>
@@ -84,10 +69,10 @@ return (
           <button className="button-submit px-5 py-3" type="submit">
               Login
           </button>
-      </Form> */}
+      </Form>
       {errorElement}
       <p className="pt-3">New to <span className="fw-bold">Exoplanet</span>? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-      <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p>
+      <p>Forget Password? <button onClick={passwordReset} className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p>
 
 <GoogleSign></GoogleSign>
     
