@@ -1,31 +1,42 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import lap from '../../../img/03.png';
+import theme from '../../../img/Theme.jpg';
 
 const Header = () => {
     return (
         
-            <Navbar bg="info" expand="lg">
-  <Container>
-    <Navbar.Brand to="/home"><img src={lap}></img></Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Link to="/home">Home</Link>
-        <Link to="/login">Login</Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item to="/about">About</NavDropdown.Item>
-          <NavDropdown.Item to="/action/3.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item to="/action/3.3">Something</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item to="/action/3.4">Separated link</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-        
+      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/home"><img style={{height:"50px"}} src={theme} className="rounded"></img></Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blog">Blog</Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                <li><Link className="dropdown-item" to="#">Another action</Link></li>
+                <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     );
 };
 
