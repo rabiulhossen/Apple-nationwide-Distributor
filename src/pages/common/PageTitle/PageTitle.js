@@ -1,10 +1,13 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
-const PageTitle = () => {
+const PageTitle = ({title}) => {
     return (
-        <div>
-            
-        </div>
+       <Helmet>
+           <title>
+{title}-Apple Distributor
+           </title>
+       </Helmet>
     );
 };
 
