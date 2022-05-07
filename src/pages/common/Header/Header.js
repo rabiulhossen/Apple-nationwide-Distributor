@@ -1,18 +1,19 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import lap from '../../../img/03.png';
 
 const Header = () => {
     return (
         
             <Navbar bg="info" expand="lg">
   <Container>
-    <Navbar.Brand to="/home">React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand to="/home"><img src={lap}></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link to="/home">Home</Nav.Link>
-        <Nav.Link to="/login">Login</Nav.Link>
+        <Link to="/home">Home</Link>
+        <Link to="/login">Login</Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <NavDropdown.Item to="/about">About</NavDropdown.Item>
           <NavDropdown.Item to="/action/3.2">Another action</NavDropdown.Item>

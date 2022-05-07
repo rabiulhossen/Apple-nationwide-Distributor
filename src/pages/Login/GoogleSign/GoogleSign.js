@@ -1,6 +1,7 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import './GoogleSign.css';
 import auth from "../../../firebase.init";
 import google from '../../../img/google.png';
 import Spinner from "../../common/Spinner/Spinner";
@@ -19,7 +20,7 @@ if(error){
     errorElement =<p className="text-danger"> Error:{error?.message}</p>
 }
 if(user){
-    navigate("/checkout");
+    navigate("/home");
 }
   return (
     <div>

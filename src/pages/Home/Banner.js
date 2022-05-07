@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import img1 from '../../img/01.png';
-import img2 from '../../img/02.png';
-import img3 from '../../img/03.png';
+import img1 from '../../img/banner-phone.jpg';
+import img2 from '../../img/ipad.jpg';
+import img3 from '../../img/macbbok.jpg';
 
 const Banner = () => {
     return (
@@ -15,8 +15,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Awesome Macbook List</h3>
+      <p> This is details about our best product apple macbook</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item interval={500}>
@@ -26,8 +26,8 @@ const Banner = () => {
       alt="Second slide"
     />
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3 className='text-dark'>All iphone is Available</h3>
+      <p className='text-dark'> In our godown all product are Available </p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -37,8 +37,8 @@ const Banner = () => {
       alt="Third slide"
     />
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3 className='text-dark'>Latest Transparent Iphone</h3>
+      <p className='text-dark'>Our most precious product was released</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
