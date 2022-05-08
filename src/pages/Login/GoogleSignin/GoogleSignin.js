@@ -6,7 +6,7 @@ import auth from "../../../firebase.init";
 import google from '../../../img/google.png';
 import Spinner from "../../common/Spinner/Spinner";
 
-const GoogleSign = () => {
+const GoogleSignin = () => {
 
     const [SignInWithGoogle,user,loading,error] = useSignInWithGoogle(auth);
     const navigate =useNavigate();
@@ -40,4 +40,4 @@ if(user){
   );
 };
 
-export default GoogleSign;
+export default GoogleSignin;

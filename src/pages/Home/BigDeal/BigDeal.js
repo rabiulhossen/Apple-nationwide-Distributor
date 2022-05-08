@@ -4,7 +4,7 @@ import hand from "../../../img/119.png";
 const BigDeal = () => {
   return (
     <div>
-      <h1 className="m-5 text-primary">We offer You</h1>
+      <h1 className="m-5 text-primary fw-bold">We offer You</h1>
       <div className="d-md-flex justify-content-around align-items-center">
         <div className="col-md-4 col-12 col-sm-12 ">
           <h3 className="text-info">

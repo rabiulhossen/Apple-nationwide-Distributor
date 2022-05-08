@@ -9,7 +9,7 @@ import {
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
-import GoogleSignin from "../GoogleSign/GoogleSignin";
+import GoogleSignin from "../GoogleSignin/GoogleSignin";
 
 const Login = () => {
   const emailRef = useRef('');
