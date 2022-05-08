@@ -1,0 +1,25 @@
+[debug] [2022-05-08T17:53:36.213Z] ----------------------------------------------------------------------
+[debug] [2022-05-08T17:53:36.217Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\GADGET STORE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-05-08T17:53:36.220Z] CLI Version:   10.8.0
+[debug] [2022-05-08T17:53:36.220Z] Platform:      win32
+[debug] [2022-05-08T17:53:36.220Z] Node Version:  v16.14.2
+[debug] [2022-05-08T17:53:36.223Z] Time:          Sun May 08 2022 23:53:36 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-08T17:53:36.223Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-08T17:53:36.275Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-08T17:53:36.275Z] > authorizing via signed-in user (rhsimon69@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\web dev\apple-nationwide-distributor
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
