@@ -3,20 +3,21 @@ import auth from "../../../firebase.init";
 import Spinner from "../../common/Spinner/Spinner";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Form, Toast } from "react-bootstrap";
-import GoogleSign from "../GoogleSign/GoogleSign";
+
 import PageTitle from "../../common/PageTitle/PageTitle";
 import {
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
+import GoogleSignin from "../GoogleSign/GoogleSignin";
 
 const Login = () => {
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
   const navigate = useNavigate();
   const location = useLocation();
 
-  let from = location.state?.from?.pathname || "/home";
+  let from = location.state?.from?.pathname || "/";
   let errorElement;
   const [SignInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
@@ -99,7 +100,7 @@ const Login = () => {
         </button>
       </p>
 
-      <GoogleSign></GoogleSign>
+      <GoogleSignin></GoogleSignin>
     </div>
   );
 };
