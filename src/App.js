@@ -12,6 +12,7 @@ import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import Inventory from "./pages/Home/inventory/Inventory";
 
 function App() {
+  console.warn = () => {};
   return (
     <div className="App">
       <Header></Header>

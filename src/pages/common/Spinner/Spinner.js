@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const Spinner = () => {
-    return (
-        <div  style={{height: '300px'}} className='w-100 d-flex justify-content-center align-items-center'>
-              <Spinner animation="border" variant="info" />
-              <Spinner animation="border" variant="warning" />
-        </div>
-    );
+  return (
+    <div>
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  );
 };
 
 export default Spinner;

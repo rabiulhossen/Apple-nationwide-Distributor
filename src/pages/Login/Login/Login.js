@@ -3,13 +3,16 @@ import auth from "../../../firebase.init";
 import Spinner from "../../common/Spinner/Spinner";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Form, Toast } from "react-bootstrap";
+import './Loggin.css';
 
 import PageTitle from "../../common/PageTitle/PageTitle";
 import {
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
-import GoogleSignin from "../GoogleSignin/GoogleSignin";
+
+import Google from "./Google/Google";
+import { Alert } from "bootstrap";
 
 const Login = () => {
   const emailRef = useRef('');
@@ -27,7 +30,7 @@ const Login = () => {
     return <Spinner></Spinner>;
   }
   if (user) {
-    navigate(from, { replace: true });
+    navigate("/home");
   }
   if (error) {
     errorElement = <p className="text-danger"> Error: {error?.message}</p>;
@@ -47,9 +50,9 @@ const Login = () => {
     const email = emailRef.current.value;
     if (email) {
       await SendPasswordResetEmail(email);
-      Toast("sent email");
+      alert("sent email");
     } else {
-      Toast("enter your email address");
+      alert("enter your email address");
     }
   };
 
@@ -100,9 +103,10 @@ const Login = () => {
         </button>
       </p>
 
-      <GoogleSignin></GoogleSignin>
+      <Google></Google>
     </div>
   );
 };
 
 export default Login;
+

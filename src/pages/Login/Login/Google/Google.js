@@ -1,12 +1,11 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import './GoogleSign.css';
-import auth from "../../../firebase.init";
-import google from '../../../img/google.png';
-import Spinner from "../../common/Spinner/Spinner";
+import auth from "../../../../firebase.init";
+import Spinner from "../../../common/Spinner/Spinner";
 
-const GoogleSignin = () => {
+import Gooogle from '../../../../img/google.png';
+const Google = () => {
 
     const [SignInWithGoogle,user,loading,error] = useSignInWithGoogle(auth);
     const navigate =useNavigate();
@@ -32,7 +31,7 @@ if(user){
       {errorElement}
       <div className="">
         <button onClick={() => SignInWithGoogle()} className="button-google">
-          <img style={{ width: "43px" }} src={google} alt="" />
+          <img style={{ width: "41px" }} src={Gooogle} alt="" />
           <span className="px-2">Google Sign In</span>
         </button>
       </div>
@@ -40,4 +39,4 @@ if(user){
   );
 };
 
-export default GoogleSignin;
+export default Google;
