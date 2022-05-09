@@ -1,7 +1,7 @@
 import React from 'react';
-import { Alert, Toast } from 'react-bootstrap';
+import { Alert, Toast, ToastContainer } from 'react-bootstrap';
 import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Spinner from '../../common/Spinner/Spinner';
 
@@ -12,11 +12,13 @@ const RequireAuth = ({children}) => {
     if(loading || sending){
         return <Spinner></Spinner>
     }
+    
 
     if (!user) {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
-    if (user.providerData[0]?.providerId ==='password' || user.emailVerified) {
+    
+    if (user.providerData[0]?.providerId ==='password' && !user.emailVerified) {
         return <div className='text-center mt-5'>
             <h3 className='text-danger'>Your Email is not verified!!</h3>
             <h5 className='text-success'> Please Verify your email address</h5>
@@ -27,12 +29,16 @@ const RequireAuth = ({children}) => {
                     alert('Sent email');
                 }}
             >
-                Send Verification Email Again.
+                Send Verification Email Again
             </button>
-            </div>
+            <ToastContainer></ToastContainer>
+        </div>
     }
+
 
     return children;
 };
 
 export default RequireAuth;
+
+

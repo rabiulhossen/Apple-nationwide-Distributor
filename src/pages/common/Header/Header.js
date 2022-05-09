@@ -18,7 +18,7 @@ const Header = () => {
           <img style={{ height: "50px" }} src={theme} className="rounded"></img>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -26,7 +26,7 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
@@ -54,8 +54,8 @@ const Header = () => {
               <>
                 <li className="nav-item">
                   <Link
-                    to="/login"
-                    className="bg-dark px-2 mx-3 my-3 rounded text-decoration-none"
+                    to="/"
+                className="bg-dark px-2 mx-3 my-3 rounded text-decoration-none"
                     onClick={handleSignOut}
                   >
                     SignOut

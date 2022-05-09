@@ -1,8 +1,8 @@
 
 .footer-clean {
     padding:50px 0;
-    background-color:#400448d2;
-    color:#f9e3e9;
+    background-color:#061450d2;
+    color:#f8bccc;
     max-height: 70vh;
   }
   
@@ -24,7 +24,7 @@
   .footer-clean ul a {
     color:inherit;
     text-decoration:none;
-    opacity:0.8;
+    opacity:3;
   }
   
   .footer-clean ul a:hover {
@@ -56,16 +56,13 @@
     line-height:40px;
     display:inline-block;
     text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
     margin-left:10px;
     margin-top:22px;
-    color:inherit;
-    opacity:0.75;
+    opacity:2;
   }
   
   .footer-clean .item.social > a:hover {
-    opacity:0.9;
+    opacity:0.7;
   }
   
   @media (max-width:991px) {
@@ -84,5 +81,6 @@
     margin-top:14px;
     margin-bottom:0;
     font-size:13px;
-    opacity:0.6;
+    color: rgb(242, 62, 170);
+    opacity:2;
   }

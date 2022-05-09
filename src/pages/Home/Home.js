@@ -3,12 +3,14 @@ import PageTitle from '../common/PageTitle/PageTitle';
 import AllProduct from './AllProduct/AllProduct';
 import Banner from './Banner';
 import BigDeal from './BigDeal/BigDeal';
+import Inventories from './Inventories/Inventories';
 
 const Home = () => {
     return (
         <div>
             <PageTitle title="Home"></PageTitle>
             <Banner></Banner>
+            <Inventories></Inventories>
             <BigDeal></BigDeal>
             <AllProduct></AllProduct>
         </div>

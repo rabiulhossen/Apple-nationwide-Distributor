@@ -11,6 +11,7 @@ import Register from "./pages/Login/Register/Register";
 import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import Inventory from "./pages/Home/inventory/Inventory";
 import AddNewItem from "./pages/AddNewItem/AddNewItem";
+import Inventories from "./pages/Home/Inventories/Inventories";
 
 function App() {
   console.warn = () => {};
@@ -29,7 +30,7 @@ function App() {
           path="/inventory"
           element={
             <RequireAuth>
-              <Inventory></Inventory>
+             <Inventories></Inventories>
             </RequireAuth>
           }
         ></Route>

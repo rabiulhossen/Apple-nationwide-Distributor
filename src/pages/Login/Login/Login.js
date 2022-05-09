@@ -30,7 +30,7 @@ const Login = () => {
     return <Spinner></Spinner>;
   }
   if (user) {
-    navigate("/home");
+    navigate("/inventory");
   }
   if (error) {
     errorElement = <p className="text-danger"> Error: {error?.message}</p>;

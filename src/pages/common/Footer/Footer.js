@@ -69,7 +69,7 @@ const Footer = () => {
             <a href="#">
               <img src={reddit} style={{ height: "45px" }}></img>
             </a>
-            <p className="mt-3">
+            <p className="mt-3 copyright ">
               copyright @ {year} 
             </p>
           </div>
