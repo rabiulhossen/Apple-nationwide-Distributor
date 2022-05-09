@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import auth from "../../../firebase.init";
 import Spinner from "../../common/Spinner/Spinner";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Form, Toast } from "react-bootstrap";
+import { Form, Toast, ToastContainer } from "react-bootstrap";
 import './Loggin.css';
 
 import PageTitle from "../../common/PageTitle/PageTitle";
@@ -13,6 +13,7 @@ import {
 
 import Google from "./Google/Google";
 import { Alert } from "bootstrap";
+import Popup from "../Popup/Popup";
 
 const Login = () => {
   const emailRef = useRef('');
@@ -50,7 +51,8 @@ const Login = () => {
     const email = emailRef.current.value;
     if (email) {
       await SendPasswordResetEmail(email);
-      alert("sent email");
+     alert('check your email')
+  
     } else {
       alert("enter your email address");
     }

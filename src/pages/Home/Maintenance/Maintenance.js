@@ -53,8 +53,8 @@ setShow(remain);
                 <tbody>
                   <tr>
                   <td>{serve.name}</td>
-                  <td>{serve.supplier }</td>
-                    <td><button>Delete</button> </td>
+                  <td className='text-center'>{serve.supplier }</td>
+                    <td className='center'><button type="button" class="btn btn-outline-info">Delete</button> </td>
                    
                   </tr>
                  
