@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../../firebase.init";
 import Spinner from "../../../common/Spinner/Spinner";
+import './Google.css';
 
 import Gooogle from '../../../../img/google.png';
 const Google = () => {
@@ -30,7 +31,7 @@ if(user){
       </div>
       {errorElement}
       <div className="">
-        <button onClick={() => SignInWithGoogle()} className="button-google">
+        <button onClick={() => SignInWithGoogle()} className="button-google ms-5">
           <img style={{ width: "41px" }} src={Gooogle} alt="" />
           <span className="px-2">Google Sign In</span>
         </button>

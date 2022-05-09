@@ -10,6 +10,7 @@ import Blog from "./pages/Blog/Blog";
 import Register from "./pages/Login/Register/Register";
 import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import Inventory from "./pages/Home/inventory/Inventory";
+import AddNewItem from "./pages/AddNewItem/AddNewItem";
 
 function App() {
   console.warn = () => {};
@@ -22,6 +23,8 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route
           path="/inventory"
           element={
@@ -30,7 +33,22 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <></>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/addnewitem"
+          element={
+            <RequireAuth>
+              <AddNewItem></AddNewItem>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

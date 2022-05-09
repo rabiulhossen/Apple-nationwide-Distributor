@@ -55,20 +55,25 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     to="/login"
-                    className="bg-dark px-2 mx-1 pt-1 rounded text-decoration-none"
+                    className="bg-dark px-2 mx-3 my-3 rounded text-decoration-none"
                     onClick={handleSignOut}
                   >
                     SignOut
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/blog">
-                    My item
+                  <Link className="nav-link active" to="/addnewitem">
+                    My Items
+                  </Link>{" "}
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/addnewitem">
+                    Add item
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link active" to="/blog">
-                    Manage
+                    Manage Item
                   </Link>{" "}
                 </li>
               </>
