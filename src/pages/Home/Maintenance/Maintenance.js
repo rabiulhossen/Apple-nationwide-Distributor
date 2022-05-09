@@ -31,11 +31,40 @@ setShow(remain);
     return (
         <div>
             <h1>Maintain your Products</h1>
-            {
-                show.map(serve => <div key={serve._id}> <h3> Name:{serve.name}</h3> <button className='btn btn-primary'onClick={()=>deleted()}>delete</button> </div>)
-            }
+            
+                 <table
+                className="table table-striped table-bordered table-dark table-hover ">
+                <thead>
+                  <tr>
+                  
+                    <th scope="col">Name</th>
+                    <th scope="col">Dsitributor</th>
+                    <th scope="col">Delete</th>
+                    
+                   
+                  </tr>
+                </thead>
+                </table>
+                {
+                show.map(serve => <table key={serve._id} 
+                serve={serve}
+                className="table table-striped table-bordered table-dark table-hover text-center">
+            
+                <tbody>
+                  <tr>
+                  <td>{serve.name}</td>
+                  <td>{serve.supplier }</td>
+                    <td><button>Delete</button> </td>
+                   
+                  </tr>
+                 
+                </tbody>
+              </table>)
+            };
         </div>
     );
 };
 
 export default Maintenance;
+
+

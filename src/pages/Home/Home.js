@@ -4,10 +4,11 @@ import AllProduct from './AllProduct/AllProduct';
 import Banner from './Banner';
 import BigDeal from './BigDeal/BigDeal';
 import Inventories from './Inventories/Inventories';
+import './Home.css';
 
 const Home = () => {
     return (
-        <div>
+        <div className='homeDiv'>
             <PageTitle title="Home"></PageTitle>
             <Banner></Banner>
             <Inventories></Inventories>

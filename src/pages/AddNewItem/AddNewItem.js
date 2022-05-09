@@ -31,10 +31,8 @@ body:JSON.stringify(data)
       <input className='mb-3 rounded'placeholder='Product image Url' {...register("img", {required: true})} /> <br/>
       <input className='rounded' placeholder='Product Quantity' type="number" {...register("Quantity", {  min:-4, max:100 })} />  <br/>
       <select {...register("supplier")}>  <br/>
-        <option value="Macbook">Macbook</option>
-        <option value="Iphone">Iphone</option>
-        <option value="Watch">Watch</option>
-        <option value="airpod">Airpod</option>
+        <option value="Apple Inc">Apple Inc.</option>
+    
         <option value="other">other</option>
       </select>
       <input className='my-3 ms-2 addButton' type="submit" value="Add ITEM" />

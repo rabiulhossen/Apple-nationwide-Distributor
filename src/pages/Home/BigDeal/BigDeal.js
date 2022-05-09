@@ -14,7 +14,7 @@ const BigDeal = () => {
           </h3>
         </div>
         <div className="col-md-6 col-sm-12 col-12">
-          <img className="img-fluid img-thumbnail rounded" src={hand}></img>
+          <img className="img-fluid rounded" src={hand}></img>
         </div>
       </div>
     </div>

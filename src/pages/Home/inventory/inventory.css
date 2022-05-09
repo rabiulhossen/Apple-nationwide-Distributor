@@ -3,10 +3,18 @@
 
 .services{
     
-    border: 1px solid rgba(254, 204, 204, 0.939);
+    border: 2px solid rgba(15, 237, 226, 0.939);
     border-radius: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+    padding-top:15px;
+    padding-left: 10px;
+    padding-bottom:15px;
+    
+    box-shadow: 2px 5px 5px 10px rgb(230, 183, 202);
+
+    text-align:center;
+    background-color:#02192f;
+    color:rgb(118, 251, 173);
+    
 
 }
 
@@ -20,13 +28,14 @@ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
 box-sizing: border-box;
 color: #FFFFFF;
 display: flex;
-font-family: Phantomsans, sans-serif;
+font-family: "JetBrains Mono",monospace;
 font-size: 20px;
-justify-content: center;
+justify-content:center;
 line-height: 1em;
 max-width: 100%;
 min-width: 140px;
 padding: 8px;
+text-transform:capitalize;
 margin: auto;
 text-decoration: none;
 user-select: none;
@@ -34,7 +43,7 @@ user-select: none;
 touch-action: manipulation;
 white-space: nowrap;
 cursor: pointer;
-text-align: center;
+text-align:center;
 }
 
 .primary:active,
@@ -65,17 +74,16 @@ background: none;
     box-sizing: border-box;
     color: #f3f4fa;
     cursor: pointer;
-    display: inline-flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display:flex;
     font-family: "JetBrains Mono",monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
     list-style: none;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     transition: box-shadow .15s,transform .15s;
     user-select: none;
@@ -93,6 +101,7 @@ background: none;
   .button-manage:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
+    background-color: #23021b;
   }
   
   .button-manage:active {

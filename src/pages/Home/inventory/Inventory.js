@@ -16,12 +16,12 @@ const Inventory = ({serve}) => {
 
 
             <img className='img-fluid'style={{height:"350px"}} src={img} alt=""/>
-            <h2 className='px-2'>Name:{name}</h2>
-            <h3>Distributor: {supplier }</h3>
-            <h4 className='fw-bold pb-2'>Description:{about}</h4>
-            <h5> Price:{price}</h5>
+            <h3 className='px-2'>Name:{name}</h3>
+            <h4>Distributor: {supplier }</h4>
+            <h4 className='fw-semi-bold pb-2 text-warning'>Description:{about}</h4>
+           <span> <h5> Price:{price}</h5>
             <h5> Quantity:{Quantity}</h5>
-            <h5> Sold:{sold}</h5>
+            <h5> Sold:{sold}</h5></span>
             <button onClick={() =>serviceDetails()} className='primary'>manage</button>
 
             
