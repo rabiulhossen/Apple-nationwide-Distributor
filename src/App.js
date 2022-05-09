@@ -12,6 +12,7 @@ import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import Inventory from "./pages/Home/inventory/Inventory";
 import AddNewItem from "./pages/AddNewItem/AddNewItem";
 import Inventories from "./pages/Home/Inventories/Inventories";
+import Maintenance from "./pages/Home/Maintenance/Maintenance";
 
 function App() {
   console.warn = () => {};
@@ -31,6 +32,14 @@ function App() {
           element={
             <RequireAuth>
              <Inventories></Inventories>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/maintenance"
+          element={
+            <RequireAuth>
+            <Maintenance></Maintenance>
             </RequireAuth>
           }
         ></Route>

@@ -26,17 +26,18 @@ body:JSON.stringify(data)
         <div className='addDiv'>
             <h1 className='text-center text-dark fw-semi-bold'>ADD NEW ITEM</h1>
              <form onSubmit={handleSubmit(onSubmit)}>
-      <input className='my-3 rounded'placeholder='Product Name' {...register("Name", {required: true})} /> <br/>
-      <input className='mb-3 rounded'placeholder='Product image Url' {...register("Name", {required: true})} /> <br/>
-      <input className='rounded' placeholder='Product Quantity' type="number" {...register("number", {  min:-4, max:100 })} />  <br/>
-      <select {...register("Type")}>  <br/>
+      <input className='my-3 rounded'placeholder='Product Name' {...register("name", {required: true})} /> <br/>
+      <input className='mb-3 rounded'placeholder='Product description' {...register("about", {required: true})} /> <br/>
+      <input className='mb-3 rounded'placeholder='Product image Url' {...register("img", {required: true})} /> <br/>
+      <input className='rounded' placeholder='Product Quantity' type="number" {...register("Quantity", {  min:-4, max:100 })} />  <br/>
+      <select {...register("supplier")}>  <br/>
         <option value="Macbook">Macbook</option>
         <option value="Iphone">Iphone</option>
         <option value="Watch">Watch</option>
         <option value="airpod">Airpod</option>
         <option value="other">other</option>
       </select>
-      <input className='my-3 ms-2 addButton' type="submit" placeholder='ADD ITEM' />
+      <input className='my-3 ms-2 addButton' type="submit" value="Add ITEM" />
     </form>
         </div>
     );

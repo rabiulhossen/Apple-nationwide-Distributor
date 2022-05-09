@@ -72,7 +72,7 @@ const Header = () => {
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/blog">
+                  <Link className="nav-link active" to="/maintenance">
                     Manage Item
                   </Link>{" "}
                 </li>
