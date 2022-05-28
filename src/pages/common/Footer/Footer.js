@@ -13,9 +13,11 @@ const Footer = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-sm-4 col-md-3 item">
-            <h3>Services</h3>
+            <h3>Services</h3>  
+            
             <ul>
               <li>
+                
                 <a href="#">Whole seller</a>
               </li>
               <li>

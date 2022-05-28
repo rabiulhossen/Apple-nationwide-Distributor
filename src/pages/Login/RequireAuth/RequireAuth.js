@@ -7,7 +7,9 @@ import Spinner from '../../common/Spinner/Spinner';
 
 const RequireAuth = ({children}) => {
     const [user,loading]= useAuthState(auth);
+   
     const location = useLocation();
+
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
     if(loading || sending){
         return <Spinner></Spinner>

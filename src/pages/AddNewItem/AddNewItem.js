@@ -5,7 +5,7 @@ import './AddNewItem.css';
 const AddNewItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{ console.log(data);
-const url = `http://localhost:5000/inventory`;
+const url = `https://mysterious-sands-37320.herokuapp.com/inventory`;
 fetch(url,{
     method:'POST',
 headers:{
@@ -29,7 +29,8 @@ body:JSON.stringify(data)
       <input className='my-3 rounded'placeholder='Product Name' {...register("name", {required: true})} /> <br/>
       <input className='mb-3 rounded'placeholder='Product description' {...register("about", {required: true})} /> <br/>
       <input className='mb-3 rounded'placeholder='Product image Url' {...register("img", {required: true})} /> <br/>
-      <input className='rounded' placeholder='Product Quantity' type="number" {...register("Quantity", {  min:-4, max:100 })} />  <br/>
+      <input className='rounded mb-3' placeholder='Product Quantity' type="number" {...register("Quantity", {  min:1, max:1000 })} />  <br/>
+      <input className='rounded' placeholder='Product price' type="number" {...register("price")} />  <br/>
       <select {...register("supplier")}>  <br/>
         <option value="Apple Inc">Apple Inc.</option>
     

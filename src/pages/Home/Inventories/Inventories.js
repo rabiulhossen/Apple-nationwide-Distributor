@@ -5,7 +5,7 @@ import "./Inventories.css";
 const Inventories = () => {
   const [show,setShow] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/inventory")
+    fetch(`https://mysterious-sands-37320.herokuapp.com/inventory`)
       .then((res) => res.json())
       .then((data) => setShow(data));
   }, []);

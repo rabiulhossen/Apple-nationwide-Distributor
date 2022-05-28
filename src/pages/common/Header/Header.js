@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import theme from "../../../img/Theme.jpg";
 import { Button } from "bootstrap";
+import { Nav } from "react-bootstrap";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -55,36 +56,37 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     to="/"
-                className="bg-dark px-2 mx-3 my-3 rounded text-decoration-none"
+                className="text-dark px-4 nav-link active"
                     onClick={handleSignOut}
                   >
-                    SignOut
+                    Sign Out
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/addnewitem">
+                  <Link className="nav-link active text-dark" to="/myitem">
                     My Items
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/addnewitem">
-                    Add item
+                  <Link className="nav-link active text-dark" to="/addnewitem">
+                    Add Item
                   </Link>{" "}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/maintenance">
+                  <Link className="nav-link active text-dark" to="/maintenance">
                     Manage Item
                   </Link>{" "}
                 </li>
               </>
             ) : (
               <li className="nav-item">
-                <Link className="nav-link active" to="/login">
+                <Link className="nav-link active text-dark" to="/login">
                   Login
                 </Link>
-              </li>
-            )}
+              </li> 
+            )}  
           </ul>
+        
         </div>
       </div>
     </nav>

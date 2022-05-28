@@ -13,8 +13,14 @@ import Inventory from "./pages/Home/inventory/Inventory";
 import AddNewItem from "./pages/AddNewItem/AddNewItem";
 import Inventories from "./pages/Home/Inventories/Inventories";
 import Maintenance from "./pages/Home/Maintenance/Maintenance";
+import { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DetailInventory from "./pages/Home/inventory/DetailInventory/DetailInventory";
+import AllShow from "./pages/Home/AllProduct/AllShow/AllShow";
+import MyItem from "./pages/MyItem/MyItem";
 
 function App() {
+ 
   console.warn = () => {};
   return (
     <div className="App">
@@ -27,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/allshow" element={<AllShow></AllShow>}></Route>
         <Route
           path="/inventory"
           element={
@@ -59,9 +66,16 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/myitem" element={<RequireAuth>
+          <MyItem></MyItem>
+        </RequireAuth>}></Route>
+        <Route path="/detailinventory/:id" element={<RequireAuth>
+          <DetailInventory></DetailInventory>
+        </RequireAuth>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      
     </div>
   );
 }
