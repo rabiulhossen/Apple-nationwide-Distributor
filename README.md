@@ -1,9 +1,9 @@
-### Getting Started with Apple distributor Website.
+#### Getting Started with Apple distributor Website.
 
 # Apple Nationwide Distributor
 
 
-Website Link: [Firebase site link](https://apple-nationwide-distributor.web.app/about)
+Website Link: [Firebase site link](https://apple-nationwide-distributor.web.app/)
 
 
 ## Key Feature
@@ -20,13 +20,8 @@ Website Link: [Firebase site link](https://apple-nationwide-distributor.web.app/
 ### Boostrap,React Bootstrap,Raw CSS $ HTML.
 
 
-
-
-
-
-
-
-
+`npm i`
+`npm start`
 
 
 ## Learn More
