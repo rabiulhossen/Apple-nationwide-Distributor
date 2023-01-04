@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../../../firebase.init";
 import Spinner from "../../../common/Spinner/Spinner";
 import './Google.css';
-
 import Gooogle from '../../../../img/google.png';
 const Google = () => {
 
@@ -26,14 +25,14 @@ if(user){
     <div>
       <div className="d-flex align-items-center">
         <div style={{ height: "1px" }} className="bg-primary w-50"></div>
-        <p className="mt-2 px-2">or</p>
+        <p className=" px-2">or</p>
         <div style={{ height: "1px" }} className="bg-primary w-50"></div>
       </div>
       {errorElement}
       <div className="">
-        <button onClick={() => SignInWithGoogle()} className="button-google ms-5">
-          <img style={{ width: "41px" }} src={Gooogle} alt="" />
-          <span className="px-2">Google Sign In</span>
+        <button onClick={() => SignInWithGoogle()} className="button">
+          <img style={{ width: "33px" }} src={Gooogle} alt="" />
+          <span className="px-2">Google</span>
         </button>
       </div>
     </div>

@@ -4,7 +4,6 @@ import Spinner from '../../common/Spinner/Spinner';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import './Loggin.css';
-
 import PageTitle from '../../common/PageTitle/PageTitle';
 import {
    useSignInWithEmailAndPassword,
@@ -56,11 +55,11 @@ const Login = () => {
    };
 
    return (
-      <div className="container w-25 mx-auto mt-5 pt-5 login-card">
+      <div className="container w-25 mx-auto mt-5 pt-3 pb-4 login-card">
          <div className="form-container">
             <PageTitle title="Login"></PageTitle>
             <div className="form">
-               <h1 className="text-primary text-center mt-2">Please Login</h1>
+               <h1 className="text-primary text-center my-4">Please Login</h1>
 
                <Form onSubmit={handleSubmit}>
                   
@@ -90,39 +89,42 @@ const Login = () => {
                         <Form.Control
                            ref={passwordRef}
                            type="password"
-                        
                            required
                            className='input'
                         />
                         <label>
-                        <span style={{transitionDelay:"0ms"}}>U</span>
-                        <span style={{transitionDelay:"50ms"}}>s</span>
-                        <span style={{transitionDelay:"100ms"}}>e</span>
-                        <span style={{transitionDelay:"150ms"}}>r</span>
+                        <span style={{transitionDelay:"0ms"}}>P</span>
+                        <span style={{transitionDelay:"50ms"}}>a</span>
+                        <span style={{transitionDelay:"100ms"}}>s</span>
+                        <span style={{transitionDelay:"150ms"}}>s</span>
+                        <span style={{transitionDelay:"200ms"}}>w</span>
+                        <span style={{transitionDelay:"250ms"}}>o</span>
+                        <span style={{transitionDelay:"300ms"}}>r</span>
+                        <span style={{transitionDelay:"350ms"}}>d</span>
                      </label>
                      </Form.Group>
                      
                 
-                  <button className="button px-5 py-3" type="submit">
+                  <button className="button px-5 py-2 mb-2" type="submit">
                      Login
                   </button>
                </Form>
                {errorElement}
-               <p className="pt-3">
-                  New to <span className="fw-bold">Apple Nationwide</span>?
+               <p className="pt-2">
+                  New to <span className="fw-bold ps-1"> Apple Nationwide</span>?
                   <Link
                      to="/register"
-                     className="text-primary pe-auto text-decoration-none"
+                     className="text-primary ps-1 text-decoration-none"
                      onClick={navigateRegister}
                   >
-                     Please Register
+                      Please Register
                   </Link>
                </p>
                <p>
                   Forget Password?
                   <button
                      onClick={passwordReset}
-                     className="btn btn-link text-primary pe-auto text-decoration-none"
+                     className="btn btn-link text-primary pe-1 text-decoration-none"
                   >
                      Reset Password
                   </button>
