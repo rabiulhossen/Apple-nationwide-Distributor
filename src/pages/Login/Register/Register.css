@@ -16,7 +16,7 @@ box-shadow: 12px 12px 24px #abb5c6, -12px -12px 24px #ffffff;
   --border-height: 2px;
   --border-before-color: rgba(4, 62, 117, 0.39);
   --border-after-color: #ba0aff;
-  --input-hovered-color: #0ed6f080;
+  --input-hovered-color: #86e2eec2;
   position: relative;
   width: var(--width-of-input);
  
@@ -80,9 +80,9 @@ input:valid ~ .input-border{
   font-size: 15px;
 }
 
-.register-btn :hover {
+/* .register-btn :hover {
   background-color: #1dcfc0;
-}
+} */
 
 .register-btn  > svg {
   width: 32px;
