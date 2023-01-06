@@ -1,7 +1,7 @@
 
 .footer-clean {
     padding:50px 0;
-    background-color:#1a012bfb;
+    background-color:#30034efb;
     color:#f5f1f2;
     max-height: 100vh;
   }
@@ -29,7 +29,8 @@
   
   .footer-clean ul a:hover {
     opacity:1;
-    color: coral;
+    color: rgb(253, 40, 243);
+    transform: scale(1.07);
   }
   
   .footer-clean .item.social {

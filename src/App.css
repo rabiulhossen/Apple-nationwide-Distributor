@@ -7,11 +7,16 @@ body{
 * {
 	margin: 0;
 	padding: 0;
+ 
 }
 
 .App {
   text-align: center;
-  background-color: rgb(218, 236, 252);
+  
+  
+  
+
+
 }
 
 .App-logo {

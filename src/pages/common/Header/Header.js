@@ -3,8 +3,8 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
-import theme from "../../../img/theme.gif";
-
+import theme from "../../../img/2.png";
+import "./Header.css";
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -95,33 +95,25 @@ const Header = () => {
     // </nav>
 
 
-<Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+<Navbar collapseOnSelect expand="lg" variant="dark" className="d-flex justify-content-between shadow bg-body-tertiary rounded  p-0 m-0 header">
       <Container>
-        <Navbar.Brand href="#home"><img style={{ height: "45px",width:"80px" }} src={theme} className="rounded"></img></Navbar.Brand>
+      <div className="d-flex justify-content-between">
+        <Navbar.Brand href="/home"><img style={{width:"77px" }} src={theme} className="rounded p-0 m-0"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav> */}
-          <Nav className="d-flex justify-content-end ">
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+         
+          <Nav className="">
+            <Link to="/" className="me-3 text-decoration-none">Home</Link>
+            <Link to="/inventory"className="me-3 text-decoration-none" >inventory</Link>
+            <Link to="/blog"className="me-3 text-decoration-none">blog</Link>
+            <Link to="/about"className="me-3 text-decoration-none">about</Link>
+            <Link eventKey={2} to="/login">
+              login
+            </Link>
           </Nav>
+       
         </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
 

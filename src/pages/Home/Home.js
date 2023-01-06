@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from '../common/PageTitle/PageTitle';
+import Newsletter from '../Newsletter/Newsletter';
 import AllProduct from './AllProduct/AllProduct';
 import Banner from './Banner';
 import BigDeal from './BigDeal/BigDeal';
@@ -17,6 +18,7 @@ const Home = () => {
            <Link to="/maintenance"className='text-decoration-none mx-auto'><button className="button-manage mt-5" role="button">Manage Inventories</button></Link>
             <BigDeal></BigDeal>
             <AllProduct></AllProduct>
+            <Newsletter/>
         
         </div>
     );
