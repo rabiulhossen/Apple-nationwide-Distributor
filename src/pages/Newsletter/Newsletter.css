@@ -12,16 +12,16 @@
      color: rgb(4, 56, 104);
      font-size: 15px;
      border: 1px solid #a935df;
-     border-radius: 0.4rem 2rem;
+     border-radius:0.4rem 0rem 0rem 2rem ;
      background-color: transparent;
     
    }
    
    .button--submit {
      min-height: 50px;
-     padding: .5em 2.5em;
+     padding: 0em 2.5em;
      border: none;
-     border-radius: 0.4rem 2rem;
+     border-radius: 0rem 2rem 0.4rem 0rem ;
      background-color: #5e4dcd;
      font-weight: 500;
      color: #fff;
